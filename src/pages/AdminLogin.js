@@ -30,7 +30,7 @@ const AdminLogin = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/admin/login', { email, password });
+      const response = await axios.post('https://backend-3var.onrender.com/admin/login', { email, password });
       localStorage.setItem('adminToken', response.data.token);
       navigate('/admin');
     } catch (err) {
