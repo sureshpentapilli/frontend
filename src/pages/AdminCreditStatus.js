@@ -18,7 +18,7 @@ const CreditDetailsTable = () => {
     const fetchCredits = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/admin/creditfetch",
+          "https://backend-3var.onrender.com/admin/creditfetch",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
@@ -46,7 +46,7 @@ const CreditDetailsTable = () => {
       const payload = { status: "rejected" };
 
       await axios.put(
-        `http://localhost:5000/admin/credit/${credit._id}`,
+        `https://backend-3var.onrender.com/admin/credit/${credit._id}`,
         payload,
         {
           headers: {
@@ -57,7 +57,7 @@ const CreditDetailsTable = () => {
 
       // Update the credits list after rejection
       const updatedCredits = await axios.get(
-        "http://localhost:5000/admin/creditfetch",
+        "https://backend-3var.onrender.com/admin/creditfetch",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
@@ -84,7 +84,7 @@ const CreditDetailsTable = () => {
       const payload = { status: "approved", approvedDays };
 
       await axios.put(
-        `http://localhost:5000/admin/credit/${selectedCredit._id}`,
+        `https://backend-3var.onrender.com/admin/credit/${selectedCredit._id}`,
         payload,
         {
           headers: {
@@ -95,7 +95,7 @@ const CreditDetailsTable = () => {
 
       // Refetch credits list
       const updatedCredits = await axios.get(
-        "http://localhost:5000/admin/creditfetch",
+        "https://backend-3var.onrender.com/admin/creditfetch",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
