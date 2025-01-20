@@ -12,7 +12,7 @@ const OrdersTable = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/admin/orders", {
+        const response = await axios.get("https://backend-3var.onrender.com/admin/orders", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`, // Add admin token
           },
