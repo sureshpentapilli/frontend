@@ -15,7 +15,7 @@ const Invoice = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/auth/getorder",
+          "https://backend-3var.onrender.com/auth/getorder",
           {
             headers: {
               Authorization: `Bearer ${token}`,
