@@ -84,7 +84,7 @@ const CreditDetailsTable = () => {
       const payload = { status: "approved", approvedDays };
 
       await axios.put(
-        `http://localhost:5000/admin/credit/${selectedCredit._id}`,
+        `https://backend-3var.onrender.com/admin/credit/${selectedCredit._id}`,
         payload,
         {
           headers: {
@@ -95,7 +95,7 @@ const CreditDetailsTable = () => {
 
       // Refetch credits list
       const updatedCredits = await axios.get(
-        "http://localhost:5000/admin/creditfetch",
+        "https://backend-3var.onrender.com/admin/creditfetch",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
